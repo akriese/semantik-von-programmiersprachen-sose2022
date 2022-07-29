@@ -156,7 +156,7 @@ Wir definieren $\Rightarrow$ durch folgende Schlussregeln. Im Folgenden schreibe
     \begin{enumerate}
         \item $k = 1$: Voraussetzung kann dafür nicht erfüllt sein, also stimmt die Aussage.
         \item $k = 2$: Wie kann $\langle S_1; S_2, \sigma \rangle \Rightarrow^2 \sigma''$ gelten?
-            Das kann nur sein, wenn im ersten Schritt $\infruleSos[2]{seq}$ augewendet wird. D.\,h. die Schlussregel
+            Das kann nur sein, wenn im ersten Schritt $\infruleSos[2]{seq}$ angewendet wird. D.\,h. die Schlussregel
             \[
                 \frac{\stranssos{S_1}{\sigma}{\sigma'}}{\stranssos{S_1; S_2}{\sigma}{\langle S_2, \sigma' \rangle}}
             \]
@@ -177,7 +177,7 @@ Wir definieren $\Rightarrow$ durch folgende Schlussregeln. Im Folgenden schreibe
         \item $\infruleSos[1]{seq}$ Der erste Schritt hat die Form $\langle S_1; S_2, \sigma \rangle \Rightarrow \langle S_1'; S_2, \sigma''' \rangle$
 
             Dann muss aber gelten $\langle S_1'; S_2, \sigma''' \rangle \Rightarrow^{k-1} \sigma''$.
-            Nach IV existiert $k_1', k_2' \in \mathbb{N}, \sigma'$, sodass $\langle S_1',  \sigma''' \rangle \Rightarrow^{k_1'} \sigma'$ und $\langle S_2',  \sigma' \rangle \Rightarrow^{k_2'} \sigma''$ und $k_1' + k_2' = k - 1$.
+            Nach IV existiert $k_1', k_2' \in \mathbb{N}, \sigma'$, sodass $\langle S_1',  \sigma''' \rangle \Rightarrow^{k_1'} \sigma'$ und $\langle S_2,  \sigma' \rangle \Rightarrow^{k_2'} \sigma''$ und $k_1' + k_2' = k - 1$.
 
             Da wir im ersten Schritt $\infruleSos[1]{seq}$ angewandt haben, muss die Schlussregel dafür erfüllt gewesen sein, \dh{} es gilt $\langle S_1, \sigma \rangle \Rightarrow \langle S_1', \sigma''' \rangle$. Also gilt auch $\langle S_1', \sigma \rangle \Rightarrow^{k_1'} \sigma'$ und somit $\langle S_1, \sigma \rangle \Rightarrow^{k_1'+1} \sigma'$.
 
@@ -215,7 +215,7 @@ Wir definieren $\Rightarrow$ durch folgende Schlussregeln. Im Folgenden schreibe
             \[
                 \langle S_1, \sigma \rangle \Rightarrow^* \sigma' \Leftrightarrow \langle S_2, \sigma \rangle \Rightarrow^* \sigma'
             \]
-        \item Es existiert eine undendliche Ableitungsfolge für $\langle S_1, \sigma \rangle$ gdw. es existiert eine unendliche Folge für $\langle S_2, \sigma \rangle$.
+        \item Es existiert eine unendliche Ableitungsfolge für $\langle S_1, \sigma \rangle$ gdw. es existiert eine unendliche Folge für $\langle S_2, \sigma \rangle$.
     \end{enumerate}
 \end{definition}
 
@@ -366,7 +366,7 @@ Wir fügen für \texttt{abort} \emph{keine neuen Schlussregeln} hinzu -- weder f
 
     $S' =$ \texttt{if $\neg(x \geq 1)$ then (while true do skip) else (y := 1; while $\neg(x = 1)$ do (y := y * x; x := x - 1))}
 
-    denn auch für \texttt{while true do skip} existiert auch kein endlicher Ableitungsbaum. D.\,h. in der natürlichen Semantik können wir nicht zwischen Abbruch und Endlossschleife unterscheiden.
+    denn auch für \texttt{while true do skip} existiert auch kein endlicher Ableitungsbaum. D.\,h. in der natürlichen Semantik können wir nicht zwischen Abbruch und Endlosschleife unterscheiden.
 
     \par\bigskip
     \hrule
